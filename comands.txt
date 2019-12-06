@@ -1,0 +1,20 @@
+git remote remove origin //removendo origem remota default
+git remote -v
+git remote add origin git: //novo git do projeto
+git remote set-url origin git://configurando a git remota
+docker-compose up //subir o docker usando o compose local
+docker-compose up --force-recreate //Erro no anterior e necessidade de forçar
+docker ps //mostra as maquinas on
+docker build -t dev/dockernode . //sobe o docker da pasta local
+yarn sequelize migration:create --name=create-users
+yarn sequelize db:create
+yarn sequelize db:migrate
+yarn sequelize db:migration:undo //desfaz ultima migration
+yarn sequelize db:migration:undo:all //desfaz todas as migrations
+docker ps -a //mostra os containers
+yarn sequelize seed:generate --name admin-user //Para criar um seed
+yarn sequelize db:seed:all //executa dodos os seeds
+docker run --name database -e POSTGRES_PASSWORD=dockerdb -p 5432:5432 -d postgres //cria docker com banco define porta e senha
+yarn sequelize migration:create --name=create-files
+
+

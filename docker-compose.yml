@@ -1,0 +1,9 @@
+version: '3'
+services:
+  node:
+    build: .
+    command: yarn dev
+    ports:
+    - "80:80"
+    volumes:
+    - .:/Developer/Dockers
